@@ -1,11 +1,16 @@
-import React from 'react'
 import q1 from "images/q1.svg"
 import q2 from "images/q2.svg"
 import q3 from "images/q3.svg"
+import { useNavigate } from 'react-router'
+import Card from 'Common/Card';
 
 
 
-const Home = ({visibleItem , data}) => {
+
+const Home = ({visibleItem }) => {
+
+  const navigate = useNavigate()
+
   return (
 
       visibleItem && <div style={{
@@ -22,19 +27,30 @@ const Home = ({visibleItem , data}) => {
         <div className="text-white mt-4 "  >
         <p  >{visibleItem.overview.slice(0,50)}</p>
         <p  >{visibleItem.overview.slice(50,100)}</p>
-        <p  >{visibleItem.overview.slice(100,150)}...</p>
+        <p  >{visibleItem.overview.slice(100,150)}</p>
+        <p  >{visibleItem.overview.slice(150,190)}...</p>
         </div>
         
       
 
         <div className="flex items-center gap-2 mt-4" >
-            <button   className="bg-white px-6 py-3 font-bold text-black rounded-[4px] flex items-center gap-2 " >  <img className="size-4"  src={q1} alt="" /> Play</button>
+            <button className="bg-white px-6 py-3 font-bold text-black rounded-[4px] flex items-center gap-2 " >  <img className="size-4"  src={q1} alt="" /> Play
+            
+            </button>
+
+            {/* <button  onClick={() => {
+                navigate("/details",{
+            state: {
+                id: item.id,
+                type: type ? type : item.media_type}})
+            }} className="bg-white px-6 py-3 font-bold text-black rounded-[4px] flex items-center gap-2 " >  <img className="size-4"  src={q1} alt="" /> Play</button> */}
             <button className="bg-[#515451] px-6 py-3 rounded-[4px] flex items-center gap-2 text-white " >  <img className="size-4"  src={q3} alt="" /> More Info</button>
         </div>
 
         <div className=""  >
           <p className="text-white text-xl pt-[124px] " >Popular on Netflix</p>
-          {/* <div className="flex flex-wrap gap-4 mt-4">
+
+         {/* <div className="flex flex-wrap gap-4 mt-4">
             {data &&
               data.map(item => (
                 <div  className="justify-self-cente">
@@ -42,6 +58,13 @@ const Home = ({visibleItem , data}) => {
                 </div>
               ))}
           </div> */}
+
+          
+          
+        
+      
+
+
         </div>
 
       </div>

@@ -28,19 +28,13 @@ const Login = () => {
 
          const data = await response.json()
 
-
-
-         if (response.ok) {
-            addToken(data.token);
-            
-        }
          
          if (response.ok){
             addToken(data.token)
             navigate('/home'); 
          }
          else {
-            setError(data.message || "Giriş başarisiz."); 
+            setError(data.message || "Giriş uygunsuz."); 
         }
 
 
@@ -73,7 +67,7 @@ const Login = () => {
         {
             title:"Sign In",
             style: "bg-[#E50914] text-white font-medium py-[3px] h-[40px] w-full rounded-[4px]  ",
-            action: () => login
+            action: login
 
         },
 

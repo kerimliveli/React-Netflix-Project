@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useStore } from 'zustand'
 import { themeStore} from "Common/Store.js"
+import ScrollButton from '../../Landing/companent/ScrollButton'
+import Card from 'Common/Card';
 
 const Similar = ({id , type}) => {
     const [data , setData] = useState([])
@@ -33,20 +35,35 @@ const Similar = ({id , type}) => {
     useEffect(() =>{
         getSimilar()     
         
-    }, [id ,type])
+    }, [type , id])
+
+
 
   return (
     <div className="mt-10" >
 
-        <h2 className="text-white text-2xl mb-4 " >Similar {type === tv ? "Tv Shows" : "Movies"} </h2>
+        <h2 className="text-white text-2xl mb-4 " >Similar {type === "tv" ? "Tv Shows" : "Movies"} </h2>
 
-        <div className="relative" >
+        {/* <div className="relative" >
             <ScrollButton direction="left" />
-            <div id="movie-card-container" className="flex items-center gap-4 owerflow-y-scroll" >
-                 {data.map(item => <Card item={item} type={type}  /> )}
+            <div id="movie-card-container" className="flex  items-center gap-4 w-full owerflow-y-scroll" >
+                 {data.map(item => <div className="flex-shrink-0" >
+                    <Card item={item} type={type}  />
+                 </div>  )}
             </div>
             <ScrollButton direction="right" />
-        </div>
+        </div> */}
+
+         <div className="relative">
+            <ScrollButton direction="left" />
+            <div  id="movie-card-container" className="flex items-center gap-4 overflow-scroll overflow-x-hidden overflow-y-hidden">
+                {data.map((item) => ( <div className="flex-shrink-0 "> <Card item={item} type={type} /> </div> ))}
+            </div>
+            <ScrollButton direction="right" />
+         </div>
+
+
+         
 
         
 

@@ -9,7 +9,7 @@ import { div } from 'motion/react-client';
 const Login = () => {
     const {addToken} =useStore(themeStore)
     const navigate = useNavigate()
-    const [formData , setformData] = useState({})
+    const [formData , setFormData] = useState({})
 
 
 
@@ -34,7 +34,7 @@ const Login = () => {
             navigate('/home'); 
          }
          else {
-            setError(data.message || "Giriş uygunsuz."); 
+            setError(data.message || "Olmadi"); 
         }
 
 
@@ -101,7 +101,7 @@ const Login = () => {
          
             }
             formItems={formItems} 
-            setformData={setformData} 
+            setFormData={setFormData} 
             formButtons={formButtons} 
             formStyle="w-[450px] h-[470px] bg-black/70 px-[68px] pt-[48px] flex flex-col gap-4 rounded-[4px]" />
 

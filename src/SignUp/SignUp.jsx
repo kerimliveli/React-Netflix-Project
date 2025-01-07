@@ -8,7 +8,7 @@ import Footer from '../Landing/companent/Footer';
 const SignUp = () => {
     const {addToken} =useStore(themeStore)
     const navigate = useNavigate()
-    const [formData , setformData] = useState({})
+    const [formData , setFormData] = useState({})
 
 
 
@@ -28,7 +28,8 @@ const SignUp = () => {
          const data = await response.json()
          
          if (response.ok){
-            addToken(data.token)
+            //addToken(data.token)
+            {navigate('/login')}
          }
 
 
@@ -68,7 +69,7 @@ const SignUp = () => {
         {
             title:"Sign Up",
             style: "bg-[#E50914] text-white font-medium py-[3px] rounded-[4px] h-[40px] w-full ",
-            action: () => {navigate('/login')}
+            action: signup
 
         },
 
@@ -104,7 +105,7 @@ const SignUp = () => {
          
           }
           formItems={formItems} 
-          setformData={setformData} 
+          setFormData={setFormData} 
           formButtons={formButtons} 
           formStyle="w-[450px] h-[570px] bg-black/70 px-[68px] pt-[48px] flex flex-col gap-4 rounded-[4px]" />
 

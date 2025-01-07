@@ -15,7 +15,7 @@ const Form = ({ headerText, setFormData, formItems , formButtons, formStyle="fle
             }} className={formStyle} >
               {headerText && <h1 className={headerText.style} >{headerText.title}</h1>}   
         {
-            formItems.map(item => <FormInput key={item.name}  label={item.label} name={item.name} type={item.type} placeholder ={item.placeholder} handleInputChange={(e) => handleInputChange(e.target.name, e.target.value)} inputStyle={item.inputStyle}  /> )
+            formItems.map(item => <FormInput key={item?.name}  label={item?.label} name={item?.name} type={item.type} placeholder ={item?.placeholder} handleInputChange={handleInputChange} inputStyle={item?.inputStyle}  /> )
         }
 
         {

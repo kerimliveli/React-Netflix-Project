@@ -2,12 +2,12 @@ import q1 from "images/q1.svg"
 import q2 from "images/q2.svg"
 import q3 from "images/q3.svg"
 import { useNavigate } from 'react-router'
-import Card from 'Common/Card';
 
 
 
 
-const Home = ({visibleItem }) => {
+const Home = ({visibleItem , item , type  }) => {
+  
 
   const navigate = useNavigate()
 
@@ -47,23 +47,12 @@ const Home = ({visibleItem }) => {
             <button className="bg-[#515451] px-6 py-3 rounded-[4px] flex items-center gap-2 text-white " >  <img className="size-4"  src={q3} alt="" /> More Info</button>
         </div>
 
-        <div className=""  >
-          <p className="text-white text-xl pt-[124px] " >Popular on Netflix</p>
-
-         {/* <div className="flex flex-wrap gap-4 mt-4">
-            {data &&
-              data.map(item => (
-                <div  className="justify-self-cente">
-                  <img className="h-[389px] w-[219px] object-cover" src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt=""/>
-                </div>
-              ))}
-          </div> */}
-
+        <div className="m-[10px]">
           
-          
-        
-      
 
+
+
+     
 
         </div>
 

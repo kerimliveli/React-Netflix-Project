@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router';
 
-//Backend kodunu run et
+
 
 const Modal = ({ data, handleModalClose, scrollY }) => {
   const navigate = useNavigate()
@@ -47,7 +47,7 @@ const Modal = ({ data, handleModalClose, scrollY }) => {
            } className="px-8 pb-5">
             
           <p className="text-white">{data.overview.slice(0,120)}</p>
-          <button onClick={() =>{navigate('/login')}} className="flex items-center justify-center bg-[#e50914] hover:bg-[#c22f27] text-white text-xl h-full px-4 py-3 pr-6 mt-8 rounded ">Get Started
+          <button onClick={() =>{navigate('/SignUp')}} className="flex items-center justify-center bg-[#e50914] hover:bg-[#c22f27] text-white text-xl h-full px-4 py-3 pr-6 mt-8 rounded hover:bg-red-700 active:bg-red-800 focus:outline-none ">Get Started
           <svg className="w-[12px] ml-[7px] pt-[4px] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#ffffff" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
           </button>
         </div>

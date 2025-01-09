@@ -66,7 +66,7 @@ const Login = () => {
     const formButtons = [
         {
             title:"Sign In",
-            style: "bg-[#E50914] text-white font-medium py-[3px] h-[40px] w-full rounded-[4px]  ",
+            style: "bg-[#E50914] text-white font-medium py-[3px] h-[40px] w-full rounded-[4px] hover:bg-red-700 active:bg-red-800 focus:outline-none  ",
             action: login
 
         },

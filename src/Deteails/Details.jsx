@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { details, div } from 'framer-motion/client'
 import Similar from './companents/Similar'
 import { useNavigate } from 'react-router';
-//Backend kodunu run et
+
 
 const Details = () => {
     const navigate = useNavigate()
@@ -93,7 +93,7 @@ const Details = () => {
                 {detailsData?.genres?.map(item => <div className="text-white bg-zinc-800 w-fit p-3 rounded-[4px]" >{item.name} </div> )}
 
                 <button onClick={() =>{navigate('/home')}}
-                className="text-white bg-red-700 w-fit p-3 rounded-[4px]" >
+                className="text-white bg-red-600 w-fit p-3 rounded-[4px] hover:bg-red-700 active:bg-red-800 focus:outline-none " >
                      Back Home
                 </button>
             

@@ -38,12 +38,6 @@ const Home = ({visibleItem , item , type  }) => {
             
             </button>
 
-            {/* <button  onClick={() => {
-                navigate("/details",{
-            state: {
-                id: item.id,
-                type: type ? type : item.media_type}})
-            }} className="bg-white px-6 py-3 font-bold text-black rounded-[4px] flex items-center gap-2 " >  <img className="size-4"  src={q1} alt="" /> Play</button> */}
             <button className="bg-[#515451] px-6 py-3 rounded-[4px] flex items-center gap-2 text-white " >  <img className="size-4"  src={q3} alt="" /> More Info</button>
         </div>
 

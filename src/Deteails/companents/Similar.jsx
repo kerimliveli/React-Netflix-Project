@@ -44,15 +44,6 @@ const Similar = ({id , type}) => {
 
         <h2 className="text-white text-2xl mb-4 " >Similar {type === "tv" ? "Tv Shows" : "Movies"} </h2>
 
-        {/* <div className="relative" >
-            <ScrollButton direction="left" />
-            <div id="movie-card-container" className="flex  items-center gap-4 w-full owerflow-y-scroll" >
-                 {data.map(item => <div className="flex-shrink-0" >
-                    <Card item={item} type={type}  />
-                 </div>  )}
-            </div>
-            <ScrollButton direction="right" />
-        </div> */}
 
          <div className="relative">
             <ScrollButton direction="left" />

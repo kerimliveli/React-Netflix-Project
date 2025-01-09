@@ -22,11 +22,11 @@ const Entry = () => {
 
                 <div className=" flex gap-2 ">
                     
-                    <select className="w-[100px] sm:w-[128px] h-[32px]  pl-2 rounded bg-black bg-opacity-40 border border-gray-700 text-white text-sm sm:text-lg " value={selectedLanguage} onChange={handleChange}>
+                    <select className="w-[100px] sm:w-[128px] h-[32px]  pl-2 rounded bg-black bg-opacity-40 border border-gray-700 text-white text-sm sm:text-lg appearance-none " value={selectedLanguage} onChange={handleChange}>
                     <option value="en">English</option>
                     <option value="ru">Русский</option>
                     </select>
-                    <button onClick={() =>{navigate('/login')}}  className="w-[70px] sm:w-[75px] h-[32px] bg-red-700 text-sm sm:text-base text-white rounded"> Sign In</button>
+                    <button onClick={() =>{navigate('/login')}}  className="w-[70px] sm:w-[75px] h-[32px] bg-red-600 text-sm sm:text-base text-white rounded hover:bg-red-700 active:bg-red-800 focus:outline-none "> Sign In</button>
                 </div>
 
                 
@@ -47,7 +47,7 @@ const Entry = () => {
                     
                     <div className="flex flex-col sm:flex-row gap-2 pt-3">
                         <input  placeholder="Email address" className="w-full sm:w-[373px] h-[40px] sm:h-[56px] border text-white pl-3   bg-black bg-opacity-40  border-gray-700 rounded " type="text" />
-                        <button onClick={() =>{navigate('/SignUp')}} className="w-full sm:w-[206px] h-[40px] sm:h-[56px]  bg-red-700 text-white rounded text-lg sm:text-2xl flex items-center justify-center ">Get Started
+                        <button onClick={() =>{navigate('/SignUp')}} className="w-full sm:w-[206px] h-[40px] sm:h-[56px]  bg-red-600 text-white rounded text-lg sm:text-2xl flex items-center justify-center hover:bg-red-700 active:bg-red-800 focus:outline-none ">Get Started
                         <svg className="w-[12px] ml-[17px] pt-[4px] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#ffffff" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                         </button>
                     </div>

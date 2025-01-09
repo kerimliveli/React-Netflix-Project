@@ -28,7 +28,7 @@ const SignUp = () => {
          const data = await response.json()
          
          if (response.ok){
-            //addToken(data.token)
+           
             {navigate('/login')}
          }
 
@@ -68,7 +68,7 @@ const SignUp = () => {
     const formButtons = [
         {
             title:"Sign Up",
-            style: "bg-[#E50914] text-white font-medium py-[3px] rounded-[4px] h-[40px] w-full ",
+            style: "bg-[#E50914] text-white font-medium py-[3px] rounded-[4px] h-[40px] w-full hover:bg-red-700 active:bg-red-800 focus:outline-none ",
             action: signup
 
         },

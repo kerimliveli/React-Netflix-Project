@@ -14,7 +14,7 @@ const Footer = () => {
     
 
     <footer className=" text-white/70 py-20   ">
-      {/* <a href="#" className="px-[130px]  underline" >Questions? Contact us.</a> */}
+      
       <h3 className="px-[130px]  underline mb-[35px] " >Questions? Contact us </h3>
       
       <div className=" px-[130px] grid grid-cols-4 underline ">
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
 
     <div className="px-[130px] pt-[50px] ">
-    <select className=" w-[128px] h-[32px] px-2 rounded bg-gray-200/10  border border-gray-700 text-white text-lg " value={selectedLanguage} onChange={handleChange}>
+    <select className=" w-[128px] h-[32px] px-2 rounded bg-gray-200/10  border border-gray-700 text-white text-lg appearance-none " value={selectedLanguage} onChange={handleChange}>
         <option value="en">English</option>
         <option value="ru">Русский</option>
     </select>

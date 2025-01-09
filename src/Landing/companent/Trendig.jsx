@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import Modal from "./Modal";
 import ScrollButton from "./ScrollButton";
 
-//Backend kodunu run et
+
 
 const Trending = ({ scrollY }) => {
   const [data, setData] = useState([]);
